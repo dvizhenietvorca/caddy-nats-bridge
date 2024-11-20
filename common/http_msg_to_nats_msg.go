@@ -4,6 +4,7 @@ import (
 	"github.com/nats-io/nats.go"
 	"io"
 	"net/http"
+	"fmt"
 )
 
 // NatsMsgForHttpRequest creates a nats.Msg from an existing http.Request: the HTTP Request Body is transferred
