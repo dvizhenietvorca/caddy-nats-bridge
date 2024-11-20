@@ -6,7 +6,7 @@ import (
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
 	"github.com/nats-io/nats.go"
-	"github.com/sandstorm/caddy-nats-bridge/common"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/common"
 	"go.uber.org/zap"
 	"io"
 	"net/http"
