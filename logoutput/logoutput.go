@@ -5,7 +5,7 @@ import (
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/nats-io/nats.go"
-	"github.com/sandstorm/caddy-nats-bridge/natsbridge"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/natsbridge"
 	"go.uber.org/zap"
 	"io"
 )
