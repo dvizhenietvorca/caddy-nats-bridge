@@ -3,12 +3,12 @@ package caddy_nats_bridge
 import (
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/httpcaddyfile"
-	"github.com/sandstorm/caddy-nats-bridge/body_jetstream"
-	"github.com/sandstorm/caddy-nats-bridge/logoutput"
-	"github.com/sandstorm/caddy-nats-bridge/natsbridge"
-	"github.com/sandstorm/caddy-nats-bridge/publish"
-	"github.com/sandstorm/caddy-nats-bridge/request"
-	"github.com/sandstorm/caddy-nats-bridge/subscribe"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/body_jetstream"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/logoutput"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/natsbridge"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/publish"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/request"
+	"github.com/dvizhenietvorca/caddy-nats-bridge/subscribe"
 )
 
 func init() {
