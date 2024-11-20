@@ -4,7 +4,6 @@ import (
 	"github.com/nats-io/nats.go"
 	"io"
 	"net/http"
-	"fmt"
 )
 
 // NatsMsgForHttpRequest creates a nats.Msg from an existing http.Request: the HTTP Request Body is transferred
@@ -32,7 +31,7 @@ func NatsMsgForHttpRequest(r *http.Request, subject string) (*nats.Msg, error) {
 	msg.Header.Add("X-NatsBridge-RemoteAddr", r.RemoteAddr) //DT
 	msg.Header.Add("X-NatsBridge-Host1", r.Host) //DT
 	msg.Header.Add("X-NatsBridge-Hostname", r.URL.Hostname()) //DT
-	msg.Header.Add("X-NatsBridge-Header", fmt.Printf("%+v", r.Header)) //DT
+	//msg.Header.Add("X-NatsBridge-Header", fmt.Printf("%+v", r.Header)) //DT
 	msg.Header.Add("X-NatsBridge-RequestURI", r.RequestURI) //DT
 	
 	return msg, nil
