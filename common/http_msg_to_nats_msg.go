@@ -31,7 +31,6 @@ func NatsMsgForHttpRequest(r *http.Request, subject string) (*nats.Msg, error) {
 	msg.Header.Add("X-NatsBridge-Host", r.Host) //DT
 	msg.Header.Add("X-NatsBridge-RemoteAddr", r.RemoteAddr) //DT
 	msg.Header.Add("X-NatsBridge-Scheme", r.Scheme) //DT
-	msg.Header.Add("X-NatsBridge-Header", r.Header.ToString()) //DT
 	
 	return msg, nil
 }
