@@ -85,6 +85,13 @@ func (p Request) ServeHTTP(w http.ResponseWriter, r *http.Request, next caddyhtt
 	for k, headers := range resp.Header {
 		for _, header := range headers {
 			w.Header().Add(k, header)
+			//DT+
+			if k == "Location" {
+				w.WriteHeader(http.StatusFound)
+			} else if k == "MSU-NotFound" {
+				w.WriteHeader(http.StatusNotFound)
+			}
+			//DT-
 		}
 	}
 	_, err = w.Write(resp.Data)
