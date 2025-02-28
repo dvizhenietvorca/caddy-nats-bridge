@@ -90,6 +90,8 @@ func (p Request) ServeHTTP(w http.ResponseWriter, r *http.Request, next caddyhtt
 				w.WriteHeader(http.StatusFound)
 			} else if k == "MSU-NotFound" {
 				w.WriteHeader(http.StatusNotFound)
+			} else if k == "MSU-Error" {
+				w.WriteHeader(http.StatusInternalServerError)
 			}
 			//DT-
 		}
