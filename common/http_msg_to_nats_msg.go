@@ -28,8 +28,11 @@ func NatsMsgForHttpRequest(r *http.Request, subject string) (*nats.Msg, error) {
 	msg.Header.Add("X-NatsBridge-UrlPath", r.URL.Path)
 	msg.Header.Add("X-NatsBridge-UrlQuery", r.URL.RawQuery)
 
-	msg.Header.Add("X-NatsBridge-Host", r.Host) //DT
-	msg.Header.Add("X-NatsBridge-RemoteAddr", r.RemoteAddr) //DT
+	//DT+
+	msg.Header.Add("X-NatsBridge-Host", r.Host)
+	msg.Header.Add("X-NatsBridge-RemoteAddr", r.RemoteAddr)
+	msg.Header.Add("X-NatsBridge-UrlScheme", r.URL.Scheme)
+	//DT-
 	
 	return msg, nil
 }
