@@ -31,7 +31,8 @@ func NatsMsgForHttpRequest(r *http.Request, subject string) (*nats.Msg, error) {
 	//DT+
 	msg.Header.Add("X-NatsBridge-Host", r.Host)
 	msg.Header.Add("X-NatsBridge-RemoteAddr", r.RemoteAddr)
-	msg.Header.Add("X-NatsBridge-UrlScheme", r.URL.Scheme)
+	msg.Header.Add("X-NatsBridge-Scheme", r.TLS != nil: "https")
+	//msg.Header.Add("X-NatsBridge-UrlScheme", r.URL.Scheme)
 	//DT-
 	
 	return msg, nil
